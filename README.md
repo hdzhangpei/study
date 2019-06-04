@@ -8,3 +8,5 @@ com.zhangpei.study.base.singleton
 com.zhangpei.study.base.multiThread.daemon
 * 模拟死锁(查看死锁,解决死锁办法)
 com.zhangpei.study.base.lock.DeadLock
+* 自定义二分查找算法
+com.zhangpei.study.base.binarySearch.BinarySearchAlgorithm
