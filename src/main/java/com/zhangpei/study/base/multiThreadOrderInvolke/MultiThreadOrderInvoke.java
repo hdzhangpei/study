@@ -1,4 +1,4 @@
-package com.zhangpei.study.base.multiThread.multiThreadOrderInvolke;
+package com.zhangpei.study.base.multiThreadOrderInvolke;
 
 /**
  * 有10000000个数字,分别开启三个线程,按顺序分别打印三个数,直到1000000;例线程1:1 2 3...10,线程2: 11 12 ....20,线程3: 21 22......30

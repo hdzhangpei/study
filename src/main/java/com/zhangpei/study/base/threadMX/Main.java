@@ -1,4 +1,4 @@
-package com.zhangpei.study.base.multiThread.threadMX;
+package com.zhangpei.study.base.threadMX;
 
 import com.google.gson.Gson;
 

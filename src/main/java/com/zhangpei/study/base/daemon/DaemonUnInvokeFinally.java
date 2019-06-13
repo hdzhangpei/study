@@ -1,4 +1,4 @@
-package com.zhangpei.study.base.multiThread.daemon;
+package com.zhangpei.study.base.daemon;
 
 import java.util.concurrent.TimeUnit;
 

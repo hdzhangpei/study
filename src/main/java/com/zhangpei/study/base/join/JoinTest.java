@@ -1,8 +1,8 @@
-package com.zhangpei.study.base.multiThread.join;
+package com.zhangpei.study.base.join;
 
 import java.util.concurrent.TimeUnit;
 
-import static com.zhangpei.study.base.multiThread.join.Util.getSencond;
+import static com.zhangpei.study.base.join.Util.getSencond;
 
 /**
  * a b 在竞争b对象锁,b.join时会释放b的锁,b.start在争锁.   join先执行时当前线程获取b锁,b线程等待.  b获取b锁,main线程等待.

@@ -1,4 +1,4 @@
-package com.zhangpei.study.base.multiThread.multiThreadOrderInvolke;
+package com.zhangpei.study.base.multiThreadOrderInvolke;
 
 import java.util.concurrent.TimeUnit;
 
