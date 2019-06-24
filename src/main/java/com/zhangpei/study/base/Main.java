@@ -77,22 +77,22 @@ public class Main {
 
         for (String group : map.keySet()) {
             String[] groupInfo = group.split("\\|");
-            String groupName = groupInfo[1];
-            String groupOrder = groupInfo[2];
+            String groupName = groupInfo[1].trim();
+            String groupOrder = groupInfo[2].trim();
 
             for (String row : map.get(group)) {
                 String[] strs = row.split("\\|");
-                String order = strs[0];
-                String key = strs[1];
-                String define = strs[2];
+                String order = strs[0].trim();
+                String key = strs[1].trim();
+                String define = strs[2].trim();
                 list_template_define.add(MessageFormat.format(SQL_TEMPLATE_DEFINE, id, key, order, groupName, groupOrder));
                 list_define.add(MessageFormat.format(SQL_DEFINE, id, id, define));
 
                 if (strs.length > 3) {
                     for (String strDefineValue : strs[3].split(";")) {
                         String[] defineValues = strDefineValue.split(":");
-                        String showKey = defineValues[0];
-                        String value = defineValues[1];
+                        String showKey = defineValues[0].trim();
+                        String value = defineValues[1].trim();
                         list_define_value.add(MessageFormat.format(SQL_DEFINE_VALUE, id, showKey, value));
                     }
                 }
