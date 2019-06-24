@@ -9,9 +9,9 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class Main {
-    private static final String SQL_TEMPLATE_DEFINE = "groupName{0};groupOrder{1};key{2};id:{3}";
-    private static final String SQL_DEFINE = "order:{0};define:{1};template_defile_id{2}";
-    private static final String SQL_DEFINE_VALUE = "defineId:{0},key:{1}, value:{2}";
+    private static final String SQL_TEMPLATE_DEFINE = "INSERT INTO template_field_define(`id`, `template_id`, `field_define`, `order`, `group_name`, `group_order`, `default_value`, `is_not_null`, `status`, `created`, `modified`) VALUES ({0}, 1, \"{1}\", \"{2}\", \"{3}\", \"{4}\", NULL, NULL, 1, \"2019-06-11 14:13:10\", \"2019-06-11 10:47:40\");";
+    private static final String SQL_DEFINE = "INSERT INTO field_define(`id`, `template_field_define_id`, `field_name`, `regular`, `data_style`, `status`, `created`, `modified`) VALUES ({0}, \"{1}\", \"{2}\", NULL, 0, 1, \"2019-06-11 14:12:45\", NULL);";
+    private static final String SQL_DEFINE_VALUE = "INSERT INTO field_value_define(`field_define_id`, `show_value`, `value`, `status`, `created`, `modified`) VALUES (\"{0}\", \"{1}\", \"{2}\", 1, \"2019-06-18 10:06:32\", \"2019-06-18 10:06:34\");";
 
     private static final Integer TEMPLATE_ID = 1;
     private static Integer id = 0;
@@ -20,9 +20,9 @@ public class Main {
     private static List<String> list_define = null;
     private static List<String> list_define_value = null;
 
-    private static final String FILE_PATH = "C:\\Users\\hdzhangpei\\Desktop\\";
+    private static final String FILE_PATH = "/Users/pei.zhang/";
     private static final String FILE_INPUT_NAME = "dataSource.txt";
-    private static final String FILE_OUTPUT_NAME = "sql{0}.txt";
+    private static final String FILE_OUTPUT_NAME = "sql.txt";
 
     public static void main(String[] args) throws IOException {
 
@@ -85,8 +85,8 @@ public class Main {
                 String order = strs[0];
                 String key = strs[1];
                 String define = strs[2];
-                list_template_define.add(MessageFormat.format(SQL_TEMPLATE_DEFINE, groupName, groupOrder, key, id));
-                list_define.add(MessageFormat.format(SQL_DEFINE, order, define, id));
+                list_template_define.add(MessageFormat.format(SQL_TEMPLATE_DEFINE, id, key, order, groupName, groupOrder));
+                list_define.add(MessageFormat.format(SQL_DEFINE, id, id, define));
 
                 if (strs.length > 3) {
                     for (String strDefineValue : strs[3].split(";")) {

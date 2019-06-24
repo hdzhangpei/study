@@ -58,12 +58,12 @@ class MyReentrantLock extends Thread {
                     System.out.println(Thread.currentThread().getName() + "==>" + ReentrantLockOrder.num.incrementAndGet());
                 }
 
-                cond.await();
 
                 next.signal();
-                if(ReentrantLockOrder.num.get() >= ReentrantLockOrder.total) {
-                    System.out.println("over");
-                    return;
+
+                if (ReentrantLockOrder.num.incrementAndGet() < ReentrantLockOrder.total) {
+
+                    cond.await();
                 }
 
             } catch (InterruptedException e) {
@@ -73,6 +73,11 @@ class MyReentrantLock extends Thread {
             }
         }
 
+
+        if(ReentrantLockOrder.num.get() >= ReentrantLockOrder.total) {
+            System.out.println(Thread.currentThread().getName() + "==>over");
+            return;
+        }
     }
 }
 //https://blog.csdn.net/Yahuvi/article/details/78742800
