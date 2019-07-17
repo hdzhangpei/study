@@ -10,11 +10,14 @@ com.zhangpei.study.base.daemon
 com.zhangpei.study.base.lock.DeadLock
 * 自定义二分查找算法
 com.zhangpei.study.base.binarySearch.BinarySearchAlgorithm
-* 多个线程实现顺序打印:1,轮询 2,wait/notify
+* 多个线程实现顺序打印:1,轮询 2,wait/notify 3，ReentrantLock condition方式实现动态代理
 com.zhangpei.study.base.multiThreadOrderInvolke.MultiThreadOrderInvoke
 com.zhangpei.study.base.multiThreadOrderInvolke.MultiThreadOrderInvoke2
+com/zhangpei/study/base/multiThreadOrderInvolke/ReentrantLockOrder.java
 * join方法使用,在有竞争锁的情况下,join会发生在并入线程执行结果之前释放锁,但是会等待线程执行结束.
 com.zhangpei.study.base.join
+* 实现动态生成代理类
+com.zhangpei.study.base.reflect
 * java中类似goto功能实现,配合for循环
 com.zhangpei.study.base.useRetryFor
 * 线程池使用
