@@ -9,6 +9,11 @@ public class SingletonLazySafe {
     private SingletonLazySafe() {
     }
 
+    /**
+     * 获取实例方法
+     * @return SingletonLazySafe.class
+     * @since 1.0
+     */
     public static synchronized SingletonLazySafe getInstance() {
 
         if (null == instance) {

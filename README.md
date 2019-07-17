@@ -15,3 +15,9 @@ com.zhangpei.study.base.multiThreadOrderInvolke.MultiThreadOrderInvoke
 com.zhangpei.study.base.multiThreadOrderInvolke.MultiThreadOrderInvoke2
 * join方法使用,在有竞争锁的情况下,join会发生在并入线程执行结果之前释放锁,但是会等待线程执行结束.
 com.zhangpei.study.base.join
+* java中类似goto功能实现,配合for循环
+com.zhangpei.study.base.useRetryFor
+* 线程池使用
+com.zhangpei.study.base.threadPool
+* 执行效率问题:在海量数据中查找数据是否存在
+com.zhangpei.study.base.findEffective
