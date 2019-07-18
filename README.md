@@ -24,3 +24,5 @@ com.zhangpei.study.base.useRetryFor
 com.zhangpei.study.base.threadPool
 * 执行效率问题:在海量数据中查找数据是否存在
 com.zhangpei.study.base.findEffective
+* 实现枚举类型多态
+com.zhangpei.study.base.enumTest
