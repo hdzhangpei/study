@@ -26,4 +26,5 @@ com.zhangpei.study.base.threadPool
 com.zhangpei.study.base.findEffective
 * 实现枚举类型多态
 com.zhangpei.study.base.enumTest
-* 2019-08-02 新增mvc工程搭建模块
+* 实现简单的socket编程
+com.zhangpei.study.base.socket
