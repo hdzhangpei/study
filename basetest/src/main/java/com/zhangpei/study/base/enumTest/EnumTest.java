@@ -5,11 +5,18 @@ package com.zhangpei.study.base.enumTest;
  */
 public enum EnumTest {
 
-    one(true,"测试说明"){
+    one(true, "测试说明") {
         @Override
-        public void run(String str) {
-            if (this.isSuccess()){
-                System.out.println(this.getDesc() + "-" + str);
+        public void run(Integer index) {
+            System.out.println(this.getClass());
+            if (this.isSuccess()) {
+                try {
+                    System.out.println(Thread.currentThread().getName() + "-" + index);
+                    Thread.sleep(1000);
+                    System.out.println(Thread.currentThread().getName() + "-" + index);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }
     };
@@ -22,7 +29,8 @@ public enum EnumTest {
 
     private String desc;
 
-    private EnumTest() {}
+    private EnumTest() {
+    }
 
     EnumTest(Boolean success, String desc) {
         this.success = success;
@@ -38,7 +46,7 @@ public enum EnumTest {
     }
 
 
-    public abstract void run(String str);
+    public abstract void run(Integer index);
 
 
 }
