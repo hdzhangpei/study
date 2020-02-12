@@ -26,26 +26,26 @@ public class TransmitableThreadLocalTest {
 
         completableFuture.get();
 
-        CompletableFuture completableFuture1 = CompletableFuture.runAsync(() -> {
-            System.out.println(Thread.currentThread() + ":::" + transmittableThreadLocal.get());
-        }, TtlExecutors.getTtlExecutorService(executorService));
-
-        completableFuture1.get();
-
-        CompletableFuture completableFuture2 = CompletableFuture.runAsync(() -> {
-            System.out.println(Thread.currentThread() + ":::" + transmittableThreadLocal.get());
-        }, TtlExecutors.getTtlExecutorService(executorService));
-
-        completableFuture2.get();
-
-
-
-        transmittableThreadLocal.set("阿斯蒂芬");
-        for (int i= 0 ; i< 3 ; i++) {
-            executorService.execute(TtlRunnable.get(() -> {
-                System.out.println(Thread.currentThread() + "===" + transmittableThreadLocal.get());
-            }));
-        }
+//        CompletableFuture completableFuture1 = CompletableFuture.runAsync(() -> {
+//            System.out.println(Thread.currentThread() + ":::" + transmittableThreadLocal.get());
+//        }, TtlExecutors.getTtlExecutorService(executorService));
+//
+//        completableFuture1.get();
+//
+//        CompletableFuture completableFuture2 = CompletableFuture.runAsync(() -> {
+//            System.out.println(Thread.currentThread() + ":::" + transmittableThreadLocal.get());
+//        }, TtlExecutors.getTtlExecutorService(executorService));
+//
+//        completableFuture2.get();
+//
+//
+//
+//        transmittableThreadLocal.set("阿斯蒂芬");
+//        for (int i= 0 ; i< 3 ; i++) {
+//            executorService.execute(TtlRunnable.get(() -> {
+//                System.out.println(Thread.currentThread() + "===" + transmittableThreadLocal.get());
+//            }));
+//        }
 
 
         executorService.shutdown();
