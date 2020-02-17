@@ -16,9 +16,9 @@ package com.zhangpei.study.base.multiThreadOrderInvolke;
  *              10000000    10000           35.397s/37.487s/35.680s
  */
 public class MultiThreadOrderInvoke {
-    public static final int total = 10000000;
+    public static final int total = 30;
     public static int num = 0;
-    public static final int batchNum = 10000;
+    public static final int batchNum = 1;
 
     static class LockObject {
         private volatile String lockName;
