@@ -5,7 +5,7 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class PrintOrderStr {
+public class 实现多线程顺序打印 {
     public static AtomicInteger num = new AtomicInteger(0);
 
     public static void main(String[] args) throws InterruptedException {
@@ -54,13 +54,13 @@ class CustomThread extends Thread {
             try {
                 lock.lock();
 
-                if (PrintOrderStr.num.incrementAndGet() <= 30) {
+                if (实现多线程顺序打印.num.incrementAndGet() <= 30) {
                     System.out.println(printStr);
                 }
 
                 next.signalAll();
 
-                if(PrintOrderStr.num.get() > 30) {
+                if(实现多线程顺序打印.num.get() > 30) {
                     return;
                 } else {
                     cond.await();
