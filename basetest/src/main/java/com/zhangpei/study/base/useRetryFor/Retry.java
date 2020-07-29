@@ -15,7 +15,9 @@ public class Retry {
         for (; ; ) {
             System.out.println("point");
 
-            for (; ; ) {
+            for (int i = 0 ; i < 90 ;i++ ) {
+                // retry之后，从头计数
+                System.out.println("====" + i);
                 count++;
                 System.out.println("count==" + count);
                 if (count % 5 == 0) {
@@ -28,6 +30,8 @@ public class Retry {
 
             }
         }
+
+        System.out.println("end");
 
     }
 
