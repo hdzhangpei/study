@@ -26,14 +26,15 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        // 获取数据：key：group信息；value：group数据
-        Map<String, List<String>> map = getDatasByTextFile();
+//        // 获取数据：key：group信息；value：group数据
+//        Map<String, List<String>> map = getDatasByTextFile();
+//
+//        // 批量生成sql语句
+//        batchGenerateSql(map);
+//
+//        // 导出数据
+//        exportData2File();
 
-        // 批量生成sql语句
-        batchGenerateSql(map);
-
-        // 导出数据
-        exportData2File();
 
     }
 
